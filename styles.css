@@ -1,0 +1,4 @@
+body {
+    background: url('sparkles.png') repeat, black;
+    cursor: none; /* Hide the default cursor */
+}

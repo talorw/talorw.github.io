@@ -1,4 +1,25 @@
-hi{
-    color:#89cff0;
-    fontfamily:fantasy}
-    
+h1{
+    color:#FFC0CB;
+    font-family: 'Courgette', cursive;
+    font-size: 24px
+}
+h2{
+    color:#FFFFFF;
+    font-family: 'Courgette', cursive;
+    font-size: 18px
+}
+h3{
+    color:#FFC0CB;
+    font-family: 'Courgette', cursive;
+    font-size: 18px
+}
+h4{
+    color:#FFFFFF;
+    font-family: 'Courgette', cursive;
+    font-size: 18px
+}
+h5{
+    color:#FFC0CB;
+    font-family: 'Courgette', cursive;
+    font-size: 12px
+}
