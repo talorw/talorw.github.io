@@ -28,6 +28,44 @@
   <source src="https://raw.githubusercontent.com/talorw/talorw.github.io/main/giphy.gif" type="video/gif">
   Your browser does not support the video tag.
 </video>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CatAPI Request</title>
+</head>
+<body>
+
+    <h1>CatAPI Request</h1>
+    <button onclick="getCatImages()">Get Cat Images</button>
+    <div id="catImages"></div>
+
+    <script>
+        function getCatImages() {
+            fetch('https://api.thecatapi.com/v1/images/search?breed_ids=beng,abys&limit=3')
+                .then(response => response.json())
+                .then(data => {
+                    displayCatImages(data);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        function displayCatImages(images) {
+            const catImagesDiv = document.getElementById('catImages');
+            catImagesDiv.innerHTML = ''; // Clear previous results
+
+            images.forEach(image => {
+                const imgElement = document.createElement('img');
+                imgElement.src = image.url;
+                imgElement.alt = 'Cat Image';
+                catImagesDiv.appendChild(imgElement);
+            });
+        }
+    </script>
+
+</body>
+</html>
 
     <div class="sparkle"></div>
 </body>
